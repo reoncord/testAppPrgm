@@ -50,7 +50,6 @@
     }
 
     th, td {
-      border-bottom: 1px solid #dddddd;
       text-align: center;
       padding: 8px;
     }
@@ -152,7 +151,7 @@
   <!-- Q & A 테이블 -->
   <table class="table">
     <thead>
-      <tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
         <th scope="col">NO.</th>
         <th scope="col">CATEGORY</th>
         <th scope="col">SUBJECT</th>
@@ -161,35 +160,35 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
         <th scope="row"><i class="fas fa-solid fa-thumbtack"></i></th>
         <td></td>
         <td>[상품 Q&A] 문의합니다 :)</td>
         <td>김OO</td>
         <td>2023.11.17</td>
       </tr>
-      <tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
         <th scope="row">5</th>
         <td></td>
         <td>[상품 Q&A] 문의합니다 :)</td>
         <td>김OO</td>
         <td>2023.11.17</td>
       </tr>
-      <tr>
+      <tr style="border-bottom: 1px solid #dddddd;" >
         <th scope="row">4</th>
         <td></td>
         <td>[상품 Q&A] 문의합니다 :)</td>
         <td>김OO</td>
         <td>2023.11.17</td>
       </tr>
-      <tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
         <th scope="row">3</th>
         <td></td>
         <td>[상품 Q&A] 문의합니다 :)</td>
         <td>박OO</td>
         <td>2023.11.17</td>
       </tr>
-      <tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
         <th scope="row">2</th>
         <td></td>
         <td>[상품 Q&A] 문의합니다 :)</td>
@@ -205,15 +204,51 @@
       </tr>
     </tbody>
   </table>
-
+  <div class="recommend-title">
+    요즘 뜨는 상품
+  </div>
   <!-- 추천 탭 -->
-  <div class="recommend">
-    <img src="img_avatar.png" alt="item1" class="image">
-    <div class="overlay">
-      <div class="text">제품 이름</div>
-      <div> 가나다라마바사</div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_5terre.jpg">
+        <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/food1.jpeg?raw=true" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc"><b>제품 이름</b>
+      <div class="subdesc">간단한 제품 설명입니다.</div></div>
     </div>
   </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_forest.jpg">
+        <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/food2.jpeg?raw=true" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc"><b>제품 이름</b>
+      <div class="subdesc">간단한 제품 설명입니다.</div></div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_lights.jpg">
+        <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/food3.jpeg?raw=true" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc"><b>제품 이름</b>
+      <div class="subdesc">간단한 제품 설명입니다.</div></div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_mountains.jpg">
+        <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/food1.jpeg?raw=true" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc"><b>제품 이름</b>
+        <div class="subdesc">간단한 제품 설명입니다.</div></div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
 
   <!-- Site footer -->
   <footer>

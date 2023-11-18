@@ -9,7 +9,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Orbit&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
@@ -18,6 +17,39 @@
       font-family: 'Poppins', sans-serif;
       background: #F3F3FD;
       box-shadow: 9px 17px 11px 0px rgba(255, 255, 255, 0.35);
+    }
+
+    footer {
+      width: 98%;
+      left: 0;
+      bottom: 0;
+      color: #4F555A;
+      padding: 20px;
+      margin-top: 150px;
+      text-align: center;
+      border-radius: 30px 30px 0 0;
+      background: var(--neutral-100, #FFF);
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-container .logo{
+      display: flex;
+      padding: 50px;
+    }
+
+    .footer-container .info {
+      /* display: flex; */
+      justify-content: space-around;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .footer-container .info div {
+      font-family: 'Noto Sans KR', sans-serif;
     }
 
     .Aboutuser {
@@ -315,7 +347,7 @@
 <body>
 
   <div class="topnav" id="myTopnav">
-    <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/Logo.png?raw=true" alt="Logo" width="auto" height="50" style="margin-left: 20px; margin-top: 10px;">
+    <img src="img/logo.png" alt="Logo" width="50" height="50">
     <a href="QnA.html">제품 문의</a>
     <a href="#down">감량</a>
     <a href="#up">증량</a>
@@ -449,23 +481,23 @@
                 </div>
               </div>
 
-    <!-- Site footer -->
   <footer>
     <div class="footer-container">
-    <div class="logo">
-      <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/Logo.png?raw=true" alt="Logo" width="183px" height="50">
+      <div class="logo">
+        <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/Logo.png?raw=true" alt="Logo" width="183px"
+          height="50">
+      </div>
+      <div class="info">
+        <div style="color: #1678F2;"><b>문의</b></div><br>
+        <div>hihello@sungkyul.ac.kr</div>
+        <div>010 - 1234 - 5678</div>
+        <div>경기도 안양시 만안구 성결대학로 53</div>
+      </div>
     </div>
-    <div class="info">
-      <div style="color: #1678F2;"><b>문의</b></div><br>
-      <div>hihello@sungkyul.ac.kr</div>
-      <div>010 - 1234 - 5678</div>
-      <div>경기도 안양시 만안구 성결대학로 53</div>
-    </div>
-    </div>
-    <p style="font-size: 15px; border-top: 1px solid gray; padding-top: 5px;">© 2023 Your Company. All rights reserved.</p>
+    <p style="font-size: 15px; border-top: 1px solid gray; padding-top: 5px;">© 2023 Your Company. All rights reserved.
+    </p>
   </footer>
   
-
               <script>
                 function myFunction() {
                   var x = document.getElementById(" myTopnav"); if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}
