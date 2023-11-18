@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Orbit&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
@@ -52,7 +53,8 @@
       margin: 20px;
       margin-bottom: 5%;
       /* background: linear-gradient(96deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);*/
-      background-color: #6c7de7;
+      /* background-color: #6c7de7; */
+      background: linear-gradient(to right, transparent, #6c7de7, transparent);
       border-radius: 35.313px;
       /* border: 1px solid #3A8EF6; */
       box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -131,8 +133,8 @@
       height: 148px;
       flex-shrink: 0;
       margin: 20px;
-      /* background: linear-gradient(96deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);*/
-      background-color: #6c7de7;
+      margin-bottom: 5%;
+      background: linear-gradient(to right, transparent, #6c7de7, transparent);
       border-radius: 35.313px;
       /* border: 1px solid #3A8EF6; */
       box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -189,6 +191,51 @@
       font-size: 25px;
     }
 
+    /*하단 그리드*/
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3개의 열, 각 열의 너비를 화면 폭에 따라 조절 */
+      grid-template-rows: repeat(2, 1fr);
+      /* 2개의 행, 각 행의 높이를 화면 높이에 따라 조절 */
+      gap: 10px;
+      /* 그리드 아이템 간의 간격 설정 */
+      margin: 30px;
+    }
+
+    .box {
+      font-family: 'Noto Sans KR', sans-serif;
+      position: relative;
+      width: 85%;
+      height: 85%;
+      border-radius: 53.139px;
+      border: 1.505px solid #E6F1FF;
+      background: linear-gradient(136deg, #EFEFEF 14.84%, rgba(187, 187, 187, 0.00) 100.63%);
+      box-shadow: 3.00965px 6.01929px 6.01929px 0px rgba(0, 0, 0, 0.15);
+      text-align: left;
+      padding-left: 30px;
+      padding-top: 20px;
+      padding-right: 20px;
+    }
+
+    .box::after {
+      content: "";
+      padding-bottom: 100%;
+      /* 정사각형을 만들기 위한 패딩 */
+      display: block;
+    }
+
+    .bottom-text {
+      position: absolute;
+      bottom: 16px;
+      /* 아래쪽 간격 조절 */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1em;
+      color: #838383;
+      width: 80%;
+      /* 텍스트 너비를 조절하여 가로 중앙 정렬 */
+    }
 
     .topnav {
       overflow: hidden;
@@ -268,8 +315,8 @@
 <body>
 
   <div class="topnav" id="myTopnav">
-    <img src="img/logo.png" alt="Logo" width="50" height="50">
-    <a href="#Q&A">제품 문의</a>
+    <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/Logo.png?raw=true" alt="Logo" width="auto" height="50" style="margin-left: 20px; margin-top: 10px;">
+    <a href="QnA.html">제품 문의</a>
     <a href="#down">감량</a>
     <a href="#up">증량</a>
     <a href="#home" class="active">HOME</a>
@@ -304,11 +351,11 @@
       </div>
     </div>
   </div>
-
+  <!-- 주문 처리 현황 제목 -->
   <div class="order-title">
     나의 주문처리 현황
   </div>
-
+  <!-- 주문 처리 현황 내용 -->
   <div class="ShipInfo">
     <div class="shippingStatusContainer">
 
@@ -332,23 +379,97 @@
           <div>
             <div class="green number">1</div>
             <div class="text" style="color: #333;"">배송중</div>
-          </div>
-          <div class=" icon"> > </div>
+            </div>
+            <div class=" icon"> > </div>
           </div>
           <div class="item">
             <div>
               <div class="green number">3</div>
               <div class="text" style="color: #333;"">배송완료</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <!-- 그리드 부분 -->
+  <div class=" grid-container">
+                <div class="box">
+                  <div>
+                    <div class="content">
+                      <h3>PROPILE</h3>
+                    </div>
+                    <div class="subTitle">회원 정보</div>
+                    <div class="bottom-text">고객님의 개인정보를 관리하는 공간입니다.</div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div>
+                    <div class="content">
+                      <h3>ORDER</h3>
+                    </div>
+                    <div class="subTitle">주문 내역 조회</div>
+                    <div class="bottom-text">고객님께서 주문하신 상품의 주문내역을 확인하실 수 있습니다.</div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div>
+                    <div class="content">
+                      <h3>WISHLIST</h3>
+                    </div>
+                    <div class="subTitle">관심 상품</div>
+                    <div class="bottom-text">관심상품으로 등록하신 상품의 목록을 보여드립니다.</div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div>
+                    <div class="content">
+                      <h3>CART</h3>
+                    </div>
+                    <div class="subTitle">장바구니</div>
+                    <div class="bottom-text">장바구니에 담으신 상품의 목록을 보여드립니다.</div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div>
+                    <div class="content">
+                      <h3>BOARD</h3>
+                    </div>
+                    <div class="subTitle">게시물 관리</div>
+                    <div class="bottom-text">고객님께서 작성하신 게시물을 관리하는 공간입니다.</div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div>
+                    <div class="content">
+                      <h3>SUBSCRIPTION</h3>
+                    </div>
+                    <div class="subTitle">정기 배송 관리</div>
+                    <div class="bottom-text">고객님께서 신청하신 정기배송의 신청 정보 및 내역을 확인하실 수 있습니다.</div>
+                  </div>
+                </div>
+              </div>
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById(" myTopnav"); if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}
-    } </script>
+    <!-- Site footer -->
+  <footer>
+    <div class="footer-container">
+    <div class="logo">
+      <img src="https://github.com/reoncord/testAppPrgm/blob/main/img/Logo.png?raw=true" alt="Logo" width="183px" height="50">
+    </div>
+    <div class="info">
+      <div style="color: #1678F2;"><b>문의</b></div><br>
+      <div>hihello@sungkyul.ac.kr</div>
+      <div>010 - 1234 - 5678</div>
+      <div>경기도 안양시 만안구 성결대학로 53</div>
+    </div>
+    </div>
+    <p style="font-size: 15px; border-top: 1px solid gray; padding-top: 5px;">© 2023 Your Company. All rights reserved.</p>
+  </footer>
+  
+
+              <script>
+                function myFunction() {
+                  var x = document.getElementById(" myTopnav"); if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}
+                } </script>
 
 </body>
 
